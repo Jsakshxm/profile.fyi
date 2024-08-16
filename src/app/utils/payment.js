@@ -1,0 +1,1 @@
+export const paymentMethod=["Credit Card","Debit Card","Net Banking","UPI","Wallet","Cash on Delivery"];
