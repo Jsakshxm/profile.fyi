@@ -17,12 +17,15 @@ const OrderPlaced = () => {
             
         <OrderSummary/>
         <div className="mt-8">
-          <Link href="/" className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
+          <Link href="/" className="p-2 m-2 text-white bg-green-500 rounded md:px-4 md:py-2 hover:bg-green-600">
             Continue Shopping
           </Link>
-          <Link href="/orders" className="px-4 py-2 ml-4 text-white bg-gray-500 rounded hover:bg-gray-600">
+<div className="pt-4">
+
+
+          <Link href="/orders" className="p-2 m-2 text-white bg-gray-500 rounded md:px-4 md:py-2 hover:bg-gray-600">
             View My Orders
-          </Link>
+          </Link> </div>
         </div>
       </div>
     </div>)}
