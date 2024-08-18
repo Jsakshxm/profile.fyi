@@ -117,4 +117,4 @@ The application uses Redux Toolkit for efficient state management. The Redux sto
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/jsakshxm/profile.fyi.git
