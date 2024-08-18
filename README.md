@@ -35,61 +35,86 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Profile.fyi E-Commerce Web Application
-This is an E-Commerce web application built using React and Redux Toolkit for efficient state management. The app provides a complete shopping experience, including a home page with a product list, a cart page for managing items, and a checkout process for placing orders.
+# E-Commerce Web Application
 
-Features
-Product listing and search functionality.
-Shopping cart with coupon discounts and summary of total price.
-Checkout page that collects user information and payment method.
-Order placement confirmation page.
-Efficient state management using Redux Toolkit with slices for products, cart, and search query.
-Project Structure
-1. Home Route (/)
-The home route is composed of two main components: Header and Body.
-Header Component
-The Header component contains:
-A profile logo whose URL is stored in constant.js (located in the utils folder).
-A shopping cart icon from the react-icons library.
-A Searchbar that allows users to search for products, integrated with the search slice of the Redux store.
-Body Component
-The Body component contains the list of product cards.
-A Card component represents each product.
-Product data is fetched from an API and dispatched to the Redux Toolkit's product slice.
-The products are mapped over to render individual Card components.
-2. Cart Route (/cart)
-The cart route displays the user's cart and includes the Header component and the CartPage component.
-CartPage Component
-Displays all distinct items that have been added to the cart, along with their quantities and prices.
-Contains the CartSummary component where users can apply coupon codes for discounts.
-CartSummary Component
-Allows users to apply coupons and calculates the discount based on fixed or percentage-based discounts.
-The discount logic is handled via the coupon.js file in the utils folder.
-3. Checkout Route (/cart/checkout)
-The checkout route includes the CheckoutPage component and the OrderSummary component.
-CheckoutPage Component
-Collects buyer information such as name, address, and payment method.
-Uses the payment.js file (located in the utils folder) to handle payment methods.
-OrderSummary Component
-Displays the subtotal, discount, and total price for the order.
-4. Order Placed Route (/cart/checkout/orderPlaced)
-Displays a confirmation message thanking the user for their order after a successful checkout.
-Redux Toolkit for State Management
-The application uses Redux Toolkit for efficient state management. The Redux store is created inside the utils folder and includes the following slices:
+This is an E-Commerce web application built using **React** and **Redux Toolkit** for efficient state management. The app provides a complete shopping experience, including a home page with product listings, a cart page for managing items, and a checkout process for placing orders.
 
-1. Product Slice
-Manages the state of all products displayed in the Body component and the products added to the cart.
-2. Search Slice
-Manages the state of the search query in the Header's search bar.
-Filters the product list in the Body component based on the search query.
-3. Cart Slice
-Manages the state of items in the cart, including the subtotal, discounts, and total amount.
-Handles coupon logic through the coupon.js file, which defines two categories of discounts: fixed amount and percentage-based discounts.
-Utils Folder
-1. constant.js
-Stores constant values, such as the profile image URL used in the Header component.
-2. coupon.js
-Defines the logic for applying coupons, including fixed and percentage-based discounts.
-3. payment.js
-Defines the available payment methods used during the checkout process.
+## Features
 
+- 🛍️ **Product Listing** and **Search Functionality**.
+- 🛒 **Shopping Cart** with coupon discounts and a total price summary.
+- 💳 **Checkout Page** that collects user information and payment method.
+- 🎉 **Order Placement Confirmation** page.
+- 🚀 **Efficient State Management** using Redux Toolkit with slices for products, cart, and search queries.
+
+## Project Structure
+
+### 1. **Home Route (`/`)**
+   The home route is composed of two main components:
+   
+   - **Header**
+   - **Body**
+   
+   #### **Header Component**
+   - Displays a profile logo whose URL is stored in `constant.js` (located in the `utils` folder).
+   - Includes a shopping cart icon from the `react-icons` library.
+   - Contains a `Searchbar` integrated with the search slice of the Redux store.
+
+   #### **Body Component**
+   - Contains the product list rendered as `Card` components.
+   - Product data is fetched from an API and dispatched to the Redux product slice.
+   - Dynamically maps over the fetched products to display them.
+
+### 2. **Cart Route (`/cart`)**
+   The cart route contains:
+   
+   - **Header**
+   - **CartPage**
+
+   #### **CartPage Component**
+   - Displays distinct items added to the cart, with their quantities and prices.
+   - Contains the `CartSummary` component where users can apply coupon codes.
+
+   #### **CartSummary Component**
+   - Allows users to apply coupons and calculates discounts based on fixed or percentage-based rules defined in `coupon.js`.
+
+### 3. **Checkout Route (`/cart/checkout`)**
+   The checkout route includes:
+   
+   - **CheckoutPage**
+   - **OrderSummary**
+
+   #### **CheckoutPage Component**
+   - Collects buyer information (name, address, payment method).
+   - Uses `payment.js` from `utils` to handle available payment methods.
+
+   #### **OrderSummary Component**
+   - Displays the subtotal, discount, and total price for the order.
+
+### 4. **Order Placed Route (`/cart/checkout/orderPlaced`)**
+   - Displays a confirmation message thanking the user after successful checkout.
+
+## State Management with Redux Toolkit
+
+The application uses Redux Toolkit for efficient state management. The Redux store includes three slices:
+
+- **Product Slice**: Manages the state of all products in the `Body` component and cart.
+- **Search Slice**: Manages the search query state in the `Header`'s search bar and filters the product list.
+- **Cart Slice**: Manages cart items, subtotal, discounts, and the total price.
+
+## Utils Folder
+
+### 1. **constant.js**
+   - Stores constants like the profile image URL used in the `Header`.
+
+### 2. **coupon.js**
+   - Defines coupon logic for fixed and percentage-based discounts.
+
+### 3. **payment.js**
+   - Handles the payment methods available during checkout.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
